@@ -27,9 +27,6 @@ const Nav = () => {
             <a className="nav-link" href="#">
               Pricing
             </a>
-            <a className="nav-link disabled" aria-disabled="true">
-              Disabled
-            </a>
           </div>
         </div>
       </div>
