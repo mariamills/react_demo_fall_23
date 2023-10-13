@@ -7,16 +7,15 @@ class Body extends Component {
     super(props);
     this.state = {
       count: 0,
-      coffee: {},
+      randomData: {},
     };
   }
 
   componentDidMount() {
     axios
-      .get('https://random-data-api.com/api/coffee/random_coffee')
+      .get('https://random-data-api.com/api/v2/users')
       .then((response) => {
-        console.log(response);
-        this.setState({ coffee: response.data });
+        this.setState({ randomData: response.data });
       })
       .catch((error) => {
         console.log(error);
@@ -24,9 +23,9 @@ class Body extends Component {
   }
 
   render() {
-    const { coffee } = this.state;
+    const { randomData } = this.state;
     return (
-      <div>
+      <div className="m-5">
         <h1>Body</h1>
         <button
           type="button"
@@ -35,7 +34,7 @@ class Body extends Component {
         >
           {this.state.count}
         </button>
-        <p>{coffee.blend_name}</p>
+        <img src={randomData.avatar} alt="" />
       </div>
     );
   }

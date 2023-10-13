@@ -1,36 +1,23 @@
 function IndexRoute() {
   return (
-    <div id="carouselExample" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="..." class="d-block w-100" alt="..." />
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="..." />
-        </div>
-        <div class="carousel-item">
-          <img src="..." class="d-block w-100" alt="..." />
+    <>
+      <div className="container-fluid my-5">
+        <div class="p-5 text-center">
+          <h1 class="mb-3">Welcome Space Explorer!🚀</h1>
+          <h4 class="mb-3">Explore the universe's wonders.</h4>
+          <p className="mb-4">
+            View a random Mars Rover or NASA's Astronomy Picture of the Day
+            (APOD).
+          </p>
+          <a className="btn btn-dark mx-2" href="/apod">
+            Astro Picture of the Day
+          </a>
+          <a class="btn btn-secondary mx-2" href="/mars">
+            Mars Rover Photo
+          </a>
         </div>
       </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExample"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
+    </>
   );
 }
 

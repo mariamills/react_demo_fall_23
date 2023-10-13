@@ -3,7 +3,7 @@ const Nav = () => {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          Navbar
+          React Demo
         </a>
         <button
           className="navbar-toggler"
@@ -18,14 +18,17 @@ const Nav = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <a className="nav-link active" aria-current="page" href="/home">
+            <a className="nav-link active" aria-current="page" href="/">
               Home
             </a>
-            <a className="nav-link" href="#">
-              Features
+            <a className="nav-link" href="/about">
+              About
             </a>
-            <a className="nav-link" href="#">
-              Pricing
+            <a className="nav-link" href="/apod">
+              APOD
+            </a>
+            <a className="nav-link" href="/mars">
+              Mars
             </a>
           </div>
         </div>

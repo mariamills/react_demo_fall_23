@@ -7,6 +7,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorNotFound from './components/ErrorNotFound';
 import Body from './components/Body';
 import IndexRoute from './components/IndexRoute';
+import About from './components/About';
+import APOD from './components/APOD';
+import Mars from './components/Mars';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +21,18 @@ const router = createBrowserRouter([
       {
         path: 'hooks',
         element: <Body />,
+      },
+      {
+        path: 'about',
+        element: <About />,
+      },
+      {
+        path: 'apod',
+        element: <APOD />,
+      },
+      {
+        path: 'mars',
+        element: <Mars />,
       },
     ],
   },
