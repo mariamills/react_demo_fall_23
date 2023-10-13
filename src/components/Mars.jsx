@@ -19,8 +19,6 @@ function Mars() {
       .then((response) => {
         const photo = getRandomPhoto(response.data.photos);
         setMarsRoverPhoto(photo);
-        console.log(response.data);
-        console.log('PHOTO:', photo);
       })
       .catch((error) => {
         console.log(error);
