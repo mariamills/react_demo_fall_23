@@ -5,7 +5,7 @@ import Body from '../components/Body';
 jest.mock('axios');
 
 // testing Body component renders
-test('renders Body component', () => {
+test('renders Body component', async () => {
   // Mock response data
   const mockData = {
     data: {
@@ -15,12 +15,15 @@ test('renders Body component', () => {
 
   axios.get.mockResolvedValue(mockData);
 
-  render(<Body />);
+  await act(async () => {
+    render(<Body />);
+  });
+
   const linkElement = screen.getByText(/Body/i);
   expect(linkElement).toBeInTheDocument();
 });
 
-test('increments count on button click', () => {
+test('increments count on button click', async () => {
   // Mock response data
   const mockData = {
     data: {
@@ -31,7 +34,10 @@ test('increments count on button click', () => {
   axios.get.mockResolvedValue(mockData);
   console.log('MOCK:', mockData);
 
-  render(<Body />);
+  await act(async () => {
+    render(<Body />);
+  });
+
   const button = screen.getByText(/0/i);
   fireEvent.click(button);
   expect(button).toHaveTextContent('1');
